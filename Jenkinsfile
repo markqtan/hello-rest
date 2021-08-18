@@ -8,6 +8,7 @@ pipeline {
       steps {
         echo 'hello world'
         script {
+          println "DEBUG: parameter foo = ${foo}"
           println new HelloGroovy().hi("Mark");
         }
       }
