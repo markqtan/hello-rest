@@ -1,4 +1,4 @@
-@Library('jenkinslib@2.0')_
+@Library('jenkinslib@2.0')
 import hello.HelloGroovy;
 
 pipeline {
