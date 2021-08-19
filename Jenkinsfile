@@ -2,7 +2,8 @@ println "this: ${this}, params: ${params.version}"
 
 final VERSION = params.version;
 
-@Library("jenkinslib@${VERSION}")_
+//@Library("jenkinslib@${VERSION}")_
+library "jenkinslib@${VERSION}"
 import hello.HelloGroovy;
 
 pipeline {
