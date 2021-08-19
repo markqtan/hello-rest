@@ -1,9 +1,3 @@
-pipeline {
-  agent any
-  environment {
-    LIB_VERSION="${params.version}"
-  }
-}  
 println "this: ${this}"
 
 @Library('jenkinslib@2.0')_
