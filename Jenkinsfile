@@ -1,6 +1,6 @@
 println "this: ${this}, params: ${params}"
 
-@Library('jenkinslib@2.0')_
+@Library('jenkinslib@${params.version}')_
 import hello.HelloGroovy;
 
 pipeline {
