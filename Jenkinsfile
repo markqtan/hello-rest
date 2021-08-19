@@ -5,8 +5,8 @@ final VERSION = params.version;
 //@Library("jenkinslib@${VERSION}")_
 //import hello.HelloGroovy;
 
-final lib = library('jenkinslib@2.0');
-println new lib.hello.HelloGroovy().hi("Mark");
+final lib = library('jenkinslib@2.0').hello;
+println new lib.HelloGroovy().hi("Mark");
 
 pipeline {
   agent any
