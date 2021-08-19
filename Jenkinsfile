@@ -3,8 +3,9 @@ println "this: ${this}, params: ${params.version}"
 final VERSION = params.version;
 
 //@Library("jenkinslib@${VERSION}")_
-library "jenkinslib@${VERSION}"
-import hello.HelloGroovy;
+//import hello.HelloGroovy;
+
+final lib = library('jenkinslib@${VERSION}');
 
 pipeline {
   agent any
@@ -17,7 +18,7 @@ pipeline {
         echo 'hello world'
         script {
           println "DEBUG: parameter version = ${params.version}"
-          println new HelloGroovy().hi("Mark");
+          println new lib.hello.HelloGroovy().hi("Mark");
         }
       }
     }
