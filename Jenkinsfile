@@ -1,4 +1,4 @@
-println "this: ${this}"
+println "this: ${this}, params: ${params}"
 
 @Library('jenkinslib@2.0')_
 import hello.HelloGroovy;
