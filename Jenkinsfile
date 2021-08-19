@@ -1,11 +1,15 @@
-@Library('jenkinslib')_
-import hello.HelloGroovy;
-
 pipeline {
   agent any
   environment {
     LIB_VERSION="${params.version}"
   }
+}  
+
+@Library('jenkinslib@{LIB_VERSION}')_
+import hello.HelloGroovy;
+
+pipeline {
+  agent any
   parameters {
         string(name: 'version', defaultValue: '1.0', description: 'shared lib version')
   }
