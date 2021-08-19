@@ -4,7 +4,7 @@ pipeline {
     LIB_VERSION="${params.version}"
   }
 }  
-println this.params
+println "this: ${this}"
 
 @Library('jenkinslib@${params.version}')_
 import hello.HelloGroovy;
