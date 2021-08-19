@@ -3,6 +3,9 @@ import hello.HelloGroovy;
 
 pipeline {
   agent any
+  parameters {
+        string(name: 'foo', defaultValue: 'foo-default', description: 'foo param')
+  }
   stages {
     stage('') {
       steps {
