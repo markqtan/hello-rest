@@ -5,7 +5,7 @@ pipeline {
   }
 }  
 
-@Library('jenkinslib@{LIB_VERSION}')_
+@Library('jenkinslib@${LIB_VERSION}')_
 import hello.HelloGroovy;
 
 pipeline {
