@@ -11,7 +11,7 @@ pipeline {
       steps {
         echo 'hello world'
         script {
-          println "DEBUG: parameter foo = ${params.foo}"
+          //println "DEBUG: parameter foo = ${params.foo}"
           println new HelloGroovy().hi("Mark");
         }
       }
