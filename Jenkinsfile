@@ -4,7 +4,7 @@ import hello.HelloGroovy;
 pipeline {
   agent any
   environment {
-    LIB_VERSION="2.0"
+    LIB_VERSION="${params.version}"
   }
   parameters {
         string(name: 'version', defaultValue: '1.0', description: 'shared lib version')
