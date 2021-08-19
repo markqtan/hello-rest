@@ -5,7 +5,7 @@ final VERSION = params.version;
 //@Library("jenkinslib@${VERSION}")_
 //import hello.HelloGroovy;
 
-final lib = library('jenkinslib@2.0').hello;
+final lib = library('jenkinslib@${VERSION}').hello;
 println lib.HelloGroovy.test("Mark");
 
 pipeline {
