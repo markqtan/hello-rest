@@ -1,6 +1,6 @@
 println "this: ${this}, params: ${params.version}"
 
-List<ParameterValue> newParams = new ArrayList<>();
+def newParams = [];
 newParams.add(new StringParameterValue("EPL_RELEASE_NUMBER", "init"))
 try {
     $build().addOrReplaceAction($build().getAction(ParametersAction.class).createUpdated(newParams))
