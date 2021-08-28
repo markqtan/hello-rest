@@ -1,7 +1,7 @@
 println "this: ${this}, params: ${params.version}"
 
 def newParams = [];
-newParams.add(new StringParameterValue("EPL_RELEASE_NUMBER", "init"))
+newParams["EPL_RELEASE_NUMBER"] = "init";
 try {
     $build().addOrReplaceAction($build().getAction(ParametersAction.class).createUpdated(newParams))
 } catch (err) {
