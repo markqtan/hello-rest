@@ -1,5 +1,14 @@
 println "this: ${this}, params: ${params.version}"
 
+List<ParameterValue> newParams = new ArrayList<>();
+newParams.add(new StringParameterValue("EPL_RELEASE_NUMBER", "init"))
+try {
+    $build().addOrReplaceAction($build().getAction(ParametersAction.class).createUpdated(newParams))
+} catch (err) {
+    $build().addOrReplaceAction(new ParametersAction(newParams))
+}
+
+
 final VERSION = params.version;
 
 //@Library("jenkinslib@${VERSION}")_
